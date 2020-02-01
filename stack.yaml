@@ -15,7 +15,4 @@ extra-deps:
 - indexed-profunctors-0.1
 - github: konn/type-natural
   commit: a7f37922fbd4866f534ca2cdde0c51aa7d6b18b3
-- git: git@github.com:konn/ghc-typelits-presburger.git
-  commit: 6245fefde1b65b0df9b946748fe3f584504c8c79
-  subdirs:
-  - ghc-typelits-presburger
+- ghc-typelits-presburger-0.3.0.0

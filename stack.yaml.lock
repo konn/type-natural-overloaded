@@ -82,21 +82,12 @@ packages:
   original:
     url: https://github.com/konn/type-natural/archive/a7f37922fbd4866f534ca2cdde0c51aa7d6b18b3.tar.gz
 - completed:
-    subdir: ghc-typelits-presburger
-    cabal-file:
-      size: 2629
-      sha256: dc3ff32b1cb0fc82b1bfa1c21d84dc55adca027ffb818ea67ec7c99859c5b522
-    name: ghc-typelits-presburger
-    version: 0.3.0.0
-    git: git@github.com:konn/ghc-typelits-presburger.git
+    hackage: ghc-typelits-presburger-0.3.0.0@sha256:dc3ff32b1cb0fc82b1bfa1c21d84dc55adca027ffb818ea67ec7c99859c5b522,2629
     pantry-tree:
-      size: 663
-      sha256: 6f4a092a1154244c7979a100bc9ca8618ee6b4fa106488e4c941715de7cad562
-    commit: 6245fefde1b65b0df9b946748fe3f584504c8c79
+      size: 528
+      sha256: 8957e953ef6bb403633b0f53e5038733fee2f8e0874d1f5662683242e874f5e9
   original:
-    subdir: ghc-typelits-presburger
-    git: git@github.com:konn/ghc-typelits-presburger.git
-    commit: 6245fefde1b65b0df9b946748fe3f584504c8c79
+    hackage: ghc-typelits-presburger-0.3.0.0
 snapshots:
 - completed:
     size: 524164
