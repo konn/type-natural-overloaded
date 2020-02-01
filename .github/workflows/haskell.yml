@@ -1,0 +1,48 @@
+name: Haskell CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Cache
+      uses: actions/cache@v1.1.0
+      with:
+        # A directory to store and save the cache
+        path: ~/.stack
+        # An explicit key for restoring and saving the cache
+        key: ${{runner.os}}-${{github.ref}}-stack-global
+        # An ordered list of keys to use for restoring the cache if no cache hit occurred for key
+        restore-keys: |
+          ${{runner.os}}-master-stack-global
+
+    - name: Cache
+      uses: actions/cache@v1.1.0
+      with:
+        # A directory to store and save the cache
+        path: .stack-work
+        # An explicit key for restoring and saving the cache
+        key: ${{runner.os}}-${{github.ref}}-stack-work
+        # An ordered list of keys to use for restoring the cache if no cache hit occurred for key
+        restore-keys: |
+          ${{runner.os}}-master-stack-work
+          
+    - uses: actions/setup-haskell@v1
+      with:
+        ghc-version: '8.6.5'
+        cabal-version: '3.0'
+    - name: Install dependencies
+      run: |
+        cabal update
+        cabal install --only-dependencies --enable-tests
+    - name: Build
+      run: |
+        cabal configure --enable-tests
+        cabal build
+    - name: Run tests
+      run: cabal test
