@@ -1,0 +1,21 @@
+resolver: lts-14.22
+
+packages:
+- .
+
+extra-deps:
+- overloaded-0.2
+- bin-0.1
+- equational-reasoning-0.6.0.1
+- optics-core-0.2
+- ral-0.1
+- singletons-2.5.1
+- sop-core-0.5.0.0
+- symbols-0.3.0.0
+- indexed-profunctors-0.1
+- github: konn/type-natural
+  commit: a7f37922fbd4866f534ca2cdde0c51aa7d6b18b3
+- git: git@github.com:konn/ghc-typelits-presburger.git
+  commit: 6245fefde1b65b0df9b946748fe3f584504c8c79
+  subdirs:
+  - ghc-typelits-presburger
